@@ -39,11 +39,10 @@ $(function() {
          */
 
         it("has working and non-empty URLs",function(){
-           
-            for(let i=0, length=allFeeds.length; i<length; i++){
-                expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name.length).not.toBe(0);
-            }
+                allFeeds.forEach(function(feed) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+            });
         });
 
         /* TODO: Write a test that loops through each feed
